@@ -4,7 +4,7 @@ A collection of free HTML5 games built for the [QJoga](https://qjoga.com) platfo
 
 ## 📜 License & Philosophy
 
-All games in this directory are **free to play** and released under the **[MIT License](LICENSE)**. They are designed to be openly available — anyone can play, modify, and share them without restrictions.
+All games in this directory are **free to play** and released under the **[BSD 3-Clause License](LICENSE)**. They are designed to be openly available — anyone can play, modify, and share them without restrictions.
 
 These games will be hosted on the **QJoga platform** and made available to the general public at no cost.
 

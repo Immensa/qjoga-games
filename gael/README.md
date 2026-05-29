@@ -37,6 +37,8 @@ The game subverts classic action game tropes. Violence is replaced by **self-reg
 
 ## 🗺️ Storyboard & Level Design (The Journey)
 
+<img width="1024" height="559" alt="Image" src="https://github.com/user-attachments/assets/db1e3c81-afdb-4830-ae6b-efe891efde43" />
+
 The game consists of 7 levels representing the journey from home to school.
 
 * **Phase 1: The Refuge (Tutorial):** Gael's bedroom. Calm blue tones. Teaches basic movement mechanics, routine (feeding the parrot), and using headphones to stabilize the Sensory Bar.

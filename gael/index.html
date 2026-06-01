@@ -20,10 +20,192 @@
             overflow: hidden;
         }
         canvas { display: block; box-shadow: 0 0 20px rgba(0,0,0,0.8); }
+
+        /* ── Menu de acesso ao jogo ─────────────────────────── */
+        #game-menu {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: clamp(12px, 2.5vw, 20px);
+            z-index: 10;
+            width: auto;
+            max-width: 90vw;
+        }
+        #game-menu .menu-btn {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(10px, 1.8vw, 14px);
+            color: #fff;
+            background: rgba(255, 255, 255, 0.06);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            padding: clamp(10px, 2vw, 14px) clamp(20px, 4vw, 32px);
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: clamp(1px, 0.3vw, 2px);
+            transition: all 0.25s ease;
+            outline: none;
+            border-radius: 4px;
+            -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+            white-space: nowrap;
+            width: auto;
+            min-width: clamp(140px, 22vw, 200px);
+            text-align: center;
+        }
+        #game-menu .menu-btn:hover {
+            background: rgba(255, 255, 255, 0.14);
+            border-color: rgba(174, 130, 255, 0.8);
+            color: #d4b8ff;
+            box-shadow: 0 0 20px rgba(174, 130, 255, 0.35);
+        }
+        #game-menu .menu-btn:active {
+            transform: scale(0.95);
+            transition: transform 0.08s ease;
+        }
+
+        /* ── Modal de Créditos ──────────────────────────────── */
+        #creditos-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            z-index: 100;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        #creditos-overlay.aberto {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #creditos-painel {
+            width: 100%;
+            max-width: min(560px, 94vw);
+            max-height: min(70vh, 80dvh);
+            overflow-y: auto;
+            background: #0d0a1a;
+            border: 2px solid rgba(174, 130, 255, 0.5);
+            border-bottom: none;
+            border-radius: clamp(6px, 1.6vw, 12px) clamp(6px, 1.6vw, 12px) 0 0;
+            padding: clamp(20px, 4vw, 32px) clamp(16px, 3vw, 28px) clamp(24px, 4vw, 40px);
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+            box-shadow: 0 -8px 40px rgba(174, 130, 255, 0.2);
+            text-align: center;
+            color: #d4b8ff;
+        }
+        #creditos-overlay.aberto #creditos-painel {
+            transform: translateY(0);
+        }
+
+        #creditos-painel h2 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(11px, 1.8vw, 16px);
+            color: #fff;
+            margin-bottom: clamp(16px, 3vw, 24px);
+            text-transform: uppercase;
+            letter-spacing: clamp(1px, 0.4vw, 3px);
+        }
+        #creditos-painel .creditos-linha {
+            font-family: 'VT323', monospace;
+            font-size: clamp(15px, 2.6vw, 20px);
+            color: #c8b8e8;
+            margin-bottom: clamp(6px, 1.2vw, 10px);
+            letter-spacing: 1px;
+        }
+        #creditos-painel .creditos-linha.destaque {
+            color: #ae82ff;
+            font-size: clamp(17px, 2.8vw, 22px);
+        }
+        #creditos-painel .creditos-separador {
+            width: clamp(40px, 8vw, 60px);
+            height: 2px;
+            background: rgba(174, 130, 255, 0.4);
+            margin: clamp(12px, 2vw, 18px) auto;
+        }
+        #creditos-painel .creditos-close {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(9px, 1.4vw, 11px);
+            color: #fff;
+            background: rgba(174, 130, 255, 0.2);
+            border: 2px solid rgba(174, 130, 255, 0.5);
+            padding: clamp(8px, 1.5vw, 10px) clamp(18px, 4vw, 28px);
+            cursor: pointer;
+            margin-top: clamp(16px, 3vw, 24px);
+            text-transform: uppercase;
+            letter-spacing: clamp(1px, 0.3vw, 2px);
+            border-radius: 4px;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+        #creditos-painel .creditos-close:hover {
+            background: rgba(174, 130, 255, 0.35);
+            box-shadow: 0 0 16px rgba(174, 130, 255, 0.35);
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/8.13.2/pixi.min.js"></script>
 </head>
 <body>
     <script type="module" src="./assets/js/main.js"></script>
+
+    <!-- ── Menu de acesso ao jogo ───────────────────────────── -->
+    <nav id="game-menu">
+        <button type="button" class="menu-btn" onclick="alert('🎮 Iniciar jogo!')">Em breve</button>
+        <button type="button" class="menu-btn" id="btn-creditos">Créditos</button>
+    </nav>
+
+    <!-- ── Modal de Créditos ────────────────────────────────── -->
+    <div id="creditos-overlay" aria-hidden="true">
+        <div id="creditos-painel" role="dialog" aria-modal="true" aria-label="Créditos">
+            <h2>🎵 Créditos</h2>
+            <p class="creditos-linha destaque">Cosmo's Journey</p>
+            <p class="creditos-linha">The Path of a Thousand Stars</p>
+            <div class="creditos-separador"></div>
+            <p class="creditos-linha">Direção &amp; Criação</p>
+            <p class="creditos-linha destaque">Gladson (Immensa) <a href="https://github.com/immensa" target="_blank" rel="noopener noreferrer">GitHub</a> </p>
+            <div class="creditos-separador"></div>
+            <p class="creditos-linha">Engine</p>
+            <p class="creditos-linha">PixiJS</p>
+            <div class="creditos-separador"></div>
+            <p class="creditos-linha">Pixel Art &amp; Design</p>
+            <p class="creditos-linha">Nano Banana - Gemini</p>
+            <div class="creditos-separador"></div>
+            <!-- <p class="creditos-linha">Trilha Sonora</p>
+            <p class="creditos-linha">Chiptune • Lo‑fi • Ambiente</p> -->
+            <button type="button" class="creditos-close" id="btn-creditos-close">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const overlay = document.getElementById('creditos-overlay');
+            const btnAbrir = document.getElementById('btn-creditos');
+            const btnFechar = document.getElementById('btn-creditos-close');
+
+            function abrir() {
+                overlay.classList.add('aberto');
+                overlay.setAttribute('aria-hidden', 'false');
+            }
+            function fechar() {
+                overlay.classList.remove('aberto');
+                overlay.setAttribute('aria-hidden', 'true');
+            }
+
+            btnAbrir.addEventListener('click', abrir);
+            btnFechar.addEventListener('click', fechar);
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) fechar();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && overlay.classList.contains('aberto')) fechar();
+            });
+        })();
+    </script>
 </body>
 </html>

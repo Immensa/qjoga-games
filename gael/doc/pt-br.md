@@ -1,3 +1,4 @@
+<a href="https://liberapay.com/gladson/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
 
 # 🌌 Cosmo's Journey: O Caminho das Mil Estrelas
 

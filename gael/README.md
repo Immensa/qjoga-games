@@ -1,3 +1,5 @@
+<a href="https://liberapay.com/gladson/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+
 # 🌌 Cosmo's Journey: The Path of a Thousand Stars
 
 **A 2D platformer focused on neurodiversity, self-regulation, and empathy.**

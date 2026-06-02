@@ -1,3 +1,5 @@
+<a href="https://liberapay.com/gladson/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+
 # 🎮 QJoga HTML5 Games
 
 A collection of free HTML5 games built for the [QJoga](https://qjoga.com) platform.

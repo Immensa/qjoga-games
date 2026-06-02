@@ -4,6 +4,10 @@
 
 <img width="1024" height="434" alt="Image" src="https://github.com/user-attachments/assets/73cbb15c-87a0-4ada-b56e-8e5c13f2fc03" />
 
+Preview:
+
+[game-gael.webm](https://github.com/user-attachments/assets/fcf52ff1-d514-4677-9812-ec7a1ca3ecdf)
+
 ## 📖 Project Overview
 
 The journey of a young autistic dreamer leaving home and navigating the route to school. The game addresses the daily challenges people on the autism spectrum face — such as sensory overload and social misunderstanding — while focusing on highlighting their rich imagination, hyperfocus abilities, and capacity for resilience.

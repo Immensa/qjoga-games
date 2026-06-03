@@ -18,6 +18,11 @@ These games will be hosted on the **QJoga platform** and made available to the g
 
 > This is the first game that will be published on the QJoga platform. More titles will be added over time.
 
+## 📄 Docs
+
+- [CONTRIBUTING.md](CONTRIBUTING.md) — Como contribuir com novos jogos e melhorias
+- [SECURITY.md](SECURITY.md) — Política de segurança e como reportar vulnerabilidades
+
 ## 🚀 Running Locally
 
 To run the game locally, serve the directory with a local server (ES Modules require HTTP to avoid CORS issues):

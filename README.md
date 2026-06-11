@@ -1,4 +1,4 @@
-<a href="https://liberapay.com/gladson/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+<a href="https://liberapay.com/gladson/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a> <a href="https://www.facebook.com/groups/qjoga"><img alt="Visit qjoga group" src="./img/facebook-group.svg"></a>
 
 # 🎮 QJoga HTML5 Games
 
@@ -12,8 +12,8 @@ These games will be hosted on the **QJoga platform** and made available to the g
 
 ## 🕹️ Games
 
-| Game | Description | Tech | Status |
-|------|-------------|------|--------|
+| Game          | Description                                                                                    | Tech                  | Status            |
+| ------------- | ---------------------------------------------------------------------------------------------- | --------------------- | ----------------- |
 | [gael](gael/) | **Cosmo's Journey** — A 2D platformer focused on neurodiversity, self-regulation, and empathy. | PixiJS → Vue 3 + Vite | 🚧 In Development |
 
 > This is the first game that will be published on the QJoga platform. More titles will be added over time.
